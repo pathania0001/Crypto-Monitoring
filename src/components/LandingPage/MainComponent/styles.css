@@ -7,7 +7,7 @@
 
 .heading1,
 .heading2,.middle-one {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
 }
 .middle-one{
@@ -84,10 +84,15 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 885px) {
   .heading1,
-  .heading2 {
+  .heading2,.middle-one {
     font-size: 2rem;
+    
+  }
+  .middle-one {
+   
+    margin-right:5rem!important;
   }
   .main-flex {
     flex-direction: column;
@@ -96,7 +101,7 @@
   }
 
   .heading1,
-  .heading2,
+  .heading2,.middle-one,
   .info-text {
     text-align: center;
   }
@@ -115,7 +120,7 @@
     margin-right: auto;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 885px) {
   .gradient,
   .iphone {
     left: 0px;

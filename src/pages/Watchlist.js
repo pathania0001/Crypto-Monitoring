@@ -4,19 +4,18 @@ import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
 import { CurrencyContext } from "../components/CurrencyApi";
-import Footer from "../components/Common/Footer/footer";
 
 function Watchlist() {
   const currency = useContext(CurrencyContext).currency
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   console.log("Watchlist",watchlist);
-  const [coins, setCoins] = useState([]);
+  const [coins, setCoins] = useState();
 
   useEffect(() => {
     if (watchlist) {
       getData();
     }
-  }, []);
+  }, [currency]);
 
 
   // useEffect(() => {window.onbeforeunload = function() {

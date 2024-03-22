@@ -2,7 +2,7 @@ import React, { useState ,useContext} from "react";
 import "./styles.css";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
-import { convertNumber, convertNumberinINR, convertNumberinUSD } from "../../../functions/convertNumber";
+import {convertNumberinINR, convertNumberinUSD } from "../../../functions/convertNumber";
 import { motion } from "framer-motion";
 import { Tooltip } from "@mui/material";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";

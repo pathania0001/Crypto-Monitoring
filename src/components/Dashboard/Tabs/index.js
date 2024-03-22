@@ -6,7 +6,6 @@ import TabPanel from "@mui/lab/TabPanel";
 import "./styles.css";
 import Grid from "../Grid";
 import List from "../List";
-import { convertNumber } from "../../../functions/convertNumber";
 import Button from "../../Common/Button";
 
 export default function TabsComponent({ coins, setSearch }) {
@@ -36,7 +35,7 @@ export default function TabsComponent({ coins, setSearch }) {
       </div>
       <TabPanel value="grid">
         <div className="grid-flex">
-          {coins.length > 0 ? (
+          {coins?.length > 0 ? (
             coins.map((coin, i) => (
               <Grid coin={coin} key={i} delay={(i % 4) * 0.2} />
             ))
@@ -60,7 +59,7 @@ export default function TabsComponent({ coins, setSearch }) {
       </TabPanel>
       <TabPanel value="list">
         <table className="list-flex">
-          {coins.length > 0 ? (
+          {coins?.length > 0 ? (
             coins.map((coin, i) => (
               <List coin={coin} key={i} delay={(i % 8) * 0.2} />
             ))
