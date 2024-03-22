@@ -6,12 +6,17 @@ import { get100Coins } from "../functions/get100Coins";
 import { CurrencyContext } from "../components/CurrencyApi";
 import { Link } from "react-router-dom";
 
+
 function Watchlist() {
   const currency = useContext(CurrencyContext).currency
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   console.log("Watchlist",watchlist);
-  const [coins, setCoins] = useState();
-
+  const [coins, setCoins] = useState([]);
+  useEffect(() => {
+    if (watchlist) {
+      getData();
+    }
+  }, []);
   useEffect(() => {
     if (watchlist) {
       getData();
@@ -28,14 +33,18 @@ function Watchlist() {
   // }},[window.onbeforeunload])
 
   const getData = async () => {
+    
     const allCoins = await get100Coins(currency);
     if (allCoins) {
       setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
       console.log("done");
     }
+
+   
   };
 
   return (
+   
     <div>
       <Header istrue={true} />
       {watchlist?.length > 0 ? (
@@ -60,7 +69,8 @@ function Watchlist() {
       )}
       
     </div>
-
+   
+       
   );
 }
 
