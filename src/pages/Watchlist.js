@@ -4,6 +4,7 @@ import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
 import { CurrencyContext } from "../components/CurrencyApi";
+import { Link } from "react-router-dom";
 
 function Watchlist() {
   const currency = useContext(CurrencyContext).currency
@@ -51,9 +52,9 @@ function Watchlist() {
               margin: "2rem",
             }}
           >
-            <a href="/dashboard">
+            <Link to="/dashboard">
               <Button text="Dashboard" />
-            </a>
+            </Link>
           </div>
         </div>
       )}

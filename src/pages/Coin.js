@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Info from "../components/CoinPage/Info";
 import LineChart from "../components/CoinPage/LineChart";
 import SelectDays from "../components/CoinPage/SelectDays";
@@ -94,9 +94,9 @@ function Coin() {
               margin: "2rem",
             }}
           >
-            <a href="/dashboard">
+            <Link to="/dashboard">
               <Button text="Dashboard" />
-            </a>
+            </Link>
           </div>
         </div>
       ) : (
