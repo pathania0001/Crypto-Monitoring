@@ -17,11 +17,7 @@ function Watchlist() {
       getData();
     }
   }, []);
-  useEffect(() => {
-    if (watchlist) {
-      getData();
-    }
-  }, [currency]);
+  
 
 
   // useEffect(() => {window.onbeforeunload = function() {
