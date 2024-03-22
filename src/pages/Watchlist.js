@@ -16,7 +16,7 @@ function Watchlist() {
     if (watchlist) {
       getData();
     }
-  }, []);
+  }, [watchlist]);
   
 
 
