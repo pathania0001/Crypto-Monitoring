@@ -12,12 +12,14 @@ function Watchlist() {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
   console.log("Watchlist",watchlist);
   const [coins, setCoins] = useState([]);
+  
   useEffect(() => {
     if (watchlist) {
       getData();
     }
-  }, [watchlist]);
-  
+  },[] );  
+ 
+
 
 
   // useEffect(() => {window.onbeforeunload = function() {
@@ -32,7 +34,7 @@ function Watchlist() {
     
     const allCoins = await get100Coins(currency);
     if (allCoins) {
-      setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
+      setCoins(allCoins?.filter((coin) => watchlist?.includes(coin.id)));
       console.log("done");
     }
 
