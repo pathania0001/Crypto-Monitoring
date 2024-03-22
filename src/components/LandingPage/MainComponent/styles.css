@@ -1,0 +1,144 @@
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 3rem;
+}
+
+.heading1,
+.heading2,.middle-one {
+  font-size: 4rem;
+  margin: 0;
+}
+.middle-one{
+  -webkit-text-stroke-color: var(--grey);
+  color: var(--grey);
+}
+.heading1:hover {
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: var(--white);
+  color: var(--black);
+  transition: all 0.3s;
+}
+.middle-one:hover {
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-stroke-color: var(--grey);
+  color: var(--black);
+  transition: all 0.3s;
+}
+
+.heading2 {
+  color: var(--blue);
+}
+
+.info-text {
+  color: var(--grey);
+  font-weight: 300;
+}
+
+.btn-flex {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.gradient-div {
+  position: relative;
+  width: 50%;
+  margin-left: auto;
+}
+
+.gradient {
+  position: absolute;
+  right: 0px;
+  top: 80px;
+  width: 250px;
+}
+.iphone {
+  position: absolute;
+  right: 10px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .heading1,
+  .heading2 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .heading1,
+  .heading2 {
+    font-size: 4rem;
+  }
+
+  .gradient {
+    right: 0px;
+    top: 60px;
+    width: 200px;
+  }
+  .iphone {
+    right: 0px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .heading1,
+  .heading2 {
+    font-size: 2rem;
+  }
+  .main-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading1,
+  .heading2,
+  .info-text {
+    text-align: center;
+  }
+
+  .info-text {
+    font-size: 0.85rem;
+  }
+
+  .btn-flex {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .gradient-div {
+    margin-top: 3rem;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gradient,
+  .iphone {
+    left: 0px;
+  }
+
+  .iphone {
+    left: -30px;
+  }
+  .middle-one{
+    -webkit-text-stroke-color: var(--grey);
+    color: var(--grey);
+    font-size: 2rem;
+    justify-content: center;
+    padding-left: 4.5rem;
+    
+  }
+  .heading1{
+    font-size: 1.81rem;
+  }
+}
+
+/* 
+clamp(minFontSize, ratio, maxFontSize)
+  formula to calculate the ratio
+  (max-size/design width) * 100
+  example: (70/1440)*100 */
