@@ -55,16 +55,14 @@ function MainComponent() {
           
             data={{
               text: "CryptoDashboard by Rajat using React JS.",
-              url: "https://main--willowy-kleicha-a7c460.netlify.app/",
+              url: "http://localhost:3001/",
               title: "CrptoMonitoring.",
             }}
             onClick={()=>{
               toast.info("App Shared!");
             }}
           >
-            <Button text={"Share App"} onClick={()=>{
-    toast.info("App Shared!");
-  }} outlined={true} />
+            <Button text={"Share App"}  outlined={true} />
           </RWebShare>
         </motion.div>
       </div>
