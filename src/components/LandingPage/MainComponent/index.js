@@ -55,7 +55,7 @@ function MainComponent() {
           
             data={{
               text: "CryptoDashboard by Rajat using React JS.",
-              url: "",
+              url: "https://main--willowy-kleicha-a7c460.netlify.app/",
               title: "CrptoMonitoring.",
             }}
             onClick={()=>{
