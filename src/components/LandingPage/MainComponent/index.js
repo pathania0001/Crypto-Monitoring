@@ -55,7 +55,7 @@ function MainComponent() {
           
             data={{
               text: "CryptoDashboard by Rajat using React JS.",
-              url: "http://localhost:3001/",
+              url: "https://crypto-monitoring-two.vercel.app/",
               title: "CrptoMonitoring.",
             }}
             onClick={()=>{
