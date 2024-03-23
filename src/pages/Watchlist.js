@@ -45,7 +45,7 @@ function Watchlist() {
    
     <div>
       <Header istrue={true} />
-      {watchlist?.length > 0 ? (
+      {watchlist ? (
         <TabsComponent coins={coins} />
       ) : (
         <div>
